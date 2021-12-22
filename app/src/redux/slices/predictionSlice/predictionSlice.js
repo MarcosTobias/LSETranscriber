@@ -1,0 +1,33 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import apiFetchPrediction from "../../../apiCalls/apiFetchPrediction";
+
+export const fetchPrediction = createAsyncThunk("/predict", async(photo) => {
+    return await apiFetchPrediction(photo);
+
+});
+
+const initialState = {
+    status : "idle",
+    error: null,
+    prediction: null
+}
+
+export const predictionSlice = createSlice({
+    name: "predictions",
+    initialState,
+    extraReducers: {
+        [fetchPrediction.pending]: (state) => {
+            state.status = "loading";
+        },
+        [fetchPrediction.fulfilled]: (state, action) => {
+            state.status = "succeeded";
+            state.prediction = action.payload;
+        },
+        [fetchPrediction.rejected]: (state, action) => {
+            state.status = "failed";
+            state.error = action.error.message;
+        }
+    }
+});
+
+export default predictionSlice.reducer;

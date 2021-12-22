@@ -1,0 +1,32 @@
+.loch2 {
+    font-size: 1.3rem;
+    margin-left: 0em;
+}
+
+.loctext {
+    font-size: 1rem;
+}
+
+.fabcontainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3em;
+}
+
+.pictureButton {
+    margin-top: 1em;
+}
+
+.picture {
+    width: 100%;
+    max-width: 250px;
+    margin-left: 2em;
+}
+
+.MuiFormLabel-root {
+    color: white !important;
+}
+
+.MuiFormHelperText-root {
+    color: white !important;
+}
