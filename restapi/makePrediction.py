@@ -5,7 +5,7 @@ import cv2
 
 class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U']
 
-model = tf.keras.models.load_model("model\\trained_tuned_ext2")
+model = tf.keras.models.load_model("model/trained_tuned_ext2")
 
 probability_model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
 
