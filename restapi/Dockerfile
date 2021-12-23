@@ -15,5 +15,5 @@ COPY . .
 
 RUN ls -la /restapi/model/trained_tuned_ext2
 
-CMD ["python", "api.py", "--host=0.0.0.0"]
+CMD ["python", "api.py"]
 
