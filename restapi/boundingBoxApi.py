@@ -12,6 +12,8 @@ def getBoundingBox(image):
 
     output_image = image.copy()
 
+    letter = "none"
+
     h, w, _ = image.shape
 
     results = hands.process(cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB))

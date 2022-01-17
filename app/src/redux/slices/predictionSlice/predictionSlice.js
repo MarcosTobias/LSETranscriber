@@ -9,19 +9,24 @@ export const fetchPrediction = createAsyncThunk("/predict", async(photo) => {
 const initialState = {
     status : "idle",
     error: null,
-    prediction: null
+    prediction: []
 }
 
 export const predictionSlice = createSlice({
     name: "predictions",
     initialState,
+    reducers: {
+        addSpace: (state) => {
+            state.prediction = state.prediction.concat(' ');
+        }
+    },
     extraReducers: {
         [fetchPrediction.pending]: (state) => {
             state.status = "loading";
         },
         [fetchPrediction.fulfilled]: (state, action) => {
             state.status = "succeeded";
-            state.prediction = action.payload;
+            state.prediction = state.prediction.concat(action.payload.prediction);
         },
         [fetchPrediction.rejected]: (state, action) => {
             state.status = "failed";
@@ -31,3 +36,5 @@ export const predictionSlice = createSlice({
 });
 
 export default predictionSlice.reducer;
+
+export const { addSpace } = predictionSlice.actions;

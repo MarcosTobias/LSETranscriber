@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Input, makeStyles, Button, Fab } from '@material-ui/core';
+import React, {  useState } from 'react';
+import { Card,  makeStyles, Fab, Input, Button } from '@material-ui/core';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPrediction } from "../redux/slices/predictionSlice/predictionSlice";
-import AddPhotoAlternateIcon from "@material-ui/icons/AddPhotoAlternate";
 import { Row, Col } from 'react-bootstrap';
 import "../css/PredictionView.css";
 import SendIcon from "@material-ui/icons/Send"
@@ -38,10 +37,7 @@ export default function PredictionVirew(props) {
     const classes = useStyles();
     const dispatch = useDispatch();
     const [photo, setPhoto] = useState(null);
-    const [photoURL, setPhotoURL] = useState(null);
-    const predictionStatus = useSelector((state) => state.predictions.status);
     const predictionError = useSelector((state) => state.predictions.error);
-    const prediction = useSelector((state) => state.predictions.prediction);
     const videoConstraints =  {
         width: 1280,
         height: 720,
@@ -49,26 +45,16 @@ export default function PredictionVirew(props) {
     }
     const webcamRef = React.useRef(null);
 
-    const capture = React.useCallback(
-        () => {
+    const capture = () => {
             const img = webcamRef.current.getScreenshot();
             setPhoto(img);
-            console.log(img)
-        }
-    )
 
-    console.log(predictionError);
-
-    const onClick = (e) => {
-        //dispatch(fetchPrediction(photo));
-        capture();
-        console.log("a");
+            dispatch(fetchPrediction(img));
     }
 
-    function uploadPhoto(event) {
-        setPhoto(event.target.files[0]);
-        setPhotoURL(URL.createObjectURL(event.target.files[0]));
-    }
+    if(predictionError !== null)
+        console.log(predictionError);
+
     return (
         <Card className={classes.root}>
             <Row>
@@ -81,7 +67,6 @@ export default function PredictionVirew(props) {
                                 height={400}
                                 ref={webcamRef}
                                 screenshotFormat="image/png"
-                                mirrored={true}
                                 width={880}
                                 videoConstraints={videoConstraints}
                             />
@@ -91,14 +76,14 @@ export default function PredictionVirew(props) {
                         <Row>
                             <Col>
                                 {photo !== null &&
-                                    <img className="picture" alt="location uploaded" src={photoURL} />
+                                    <img className="picture" alt="location uploaded" src={photo} />
                                 }
                             </Col>
                         </Row>
                     </div>
 
                     <div className="fabcontainer">
-                        <Fab color="primary" aria-label="send" onClick={onClick}>
+                        <Fab color="primary" aria-label="send" onClick={capture}>
                             <SendIcon />
                         </Fab>
                     </div>

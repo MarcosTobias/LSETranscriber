@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import cross_origin
+from flask_cors import CORS
 from flask_restx import Resource, Api
 from PIL import Image
 import numpy as np
@@ -7,12 +7,13 @@ import boundingBoxApi as bb
 import makePrediction as mp
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app, version='1.0', title='LSE Transcriber API', description='API for the LSE Transcriber application. Given a photo of a hand performing a sign on the LSE fingerspelling it would output the predicted letter')
 
 @api.route('/predict', methods=["POST"])
 class PredictImage(Resource):
-    @cross_origin()
     def post(self):
+
         file = request.files['image']
 
         img = Image.open(file.stream)
@@ -31,12 +32,6 @@ class PredictImage(Resource):
         prediction = mp.predict(boundedHand)
 
         return jsonify({'msg': 'success', 'prediction': prediction})
-
-
-@api.route('/hello')
-class HelloWorld(Resource):
-    def get(self):
-        return jsonify({'hello' : 'world'})
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=5000)

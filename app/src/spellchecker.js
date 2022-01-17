@@ -1,0 +1,1 @@
+var SpellChecker = require('simple-spellchecker')

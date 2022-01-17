@@ -1,5 +1,9 @@
 import Api from "../api/API";
 
 export default async function apiFetchPrediction(photo) {
-    return await Api.getPrediction(photo);
+    let image = await fetch(photo);
+    image = await image.blob();
+    image = new File([image], "image"); 
+    
+    return await Api.getPrediction(image);
 }
