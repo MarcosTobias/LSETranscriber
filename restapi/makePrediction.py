@@ -17,6 +17,9 @@ def predict(image):
 
     predictions = probability_model.predict(img2)
 
+    #if np.max(predictions) < 0.4:
+        #return -1
+
     class_predicted = class_names[np.argmax(predictions)]
 
-    return class_predicted
+    return class_predicted, np.max(predictions)

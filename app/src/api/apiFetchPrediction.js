@@ -1,4 +1,4 @@
-import Api from "../api/API";
+import Api from "./API";
 
 export default async function apiFetchPrediction(photo) {
     let image = await fetch(photo);

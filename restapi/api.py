@@ -1,3 +1,4 @@
+import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_restx import Resource, Api
@@ -25,13 +26,16 @@ class PredictImage(Resource):
 
         boundedHand = bb.getBoundingBox(img)
 
-        if boundedHand.size == 0:
-            return jsonify({'msg': 'success', 'prediction': 'No hand detected'})
+        if boundedHand.size == "none":
+            return jsonify({'msg': 'error', 'prediction': 'No hand detected'})
 
 
-        prediction = mp.predict(boundedHand)
+        prediction, confidence = mp.predict(boundedHand)
 
-        return jsonify({'msg': 'success', 'prediction': prediction})
+        if prediction == -1:
+            return jsonify({'msg': 'error', 'prediction': 'Not surpassing confidence threshold', 'confidence': json.dumps(str(confidence))})
+        else:
+            return jsonify({'msg': 'success', 'prediction': prediction, 'confidence': json.dumps(str(confidence))})
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=5000)
