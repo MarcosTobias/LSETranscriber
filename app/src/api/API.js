@@ -1,7 +1,7 @@
 class API {
     constructor() {
         //this.apiEndPoint = "http://156.35.163.139:5000";
-        this.apiEndPoint = "http://192.168.0.7:5000";
+        this.apiEndPoint = "http://192.168.99.103:5000";
     }
 
     buildHeaders() {

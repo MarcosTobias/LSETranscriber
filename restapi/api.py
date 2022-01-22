@@ -37,5 +37,11 @@ class PredictImage(Resource):
         else:
             return jsonify({'msg': 'success', 'prediction': prediction, 'confidence': json.dumps(str(confidence))})
 
+
+@api.route('/hello')
+class HelloWorld(Resource):
+    def get(self):
+        return jsonify({'hello' : 'world'})
+        
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=5000)
