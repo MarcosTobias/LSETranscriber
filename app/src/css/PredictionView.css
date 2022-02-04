@@ -11,6 +11,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 3em;
+    width: 80%;
 }
 
 .pictureButton {
@@ -29,4 +30,8 @@
 
 .MuiFormHelperText-root {
     color: white !important;
+}
+
+.box {
+    margin-top: 15em;
 }

@@ -1,0 +1,35 @@
+.navBar {
+    background: linear-gradient(90deg, #DD5E89 0%, #F7BB97 100%);
+    display: flex;
+    font-size: 1.2rem;
+    color: rgb(116, 196, 231);
+    height: 4em;
+}
+
+.nav-links:hover {
+    background-color: #90e0ef;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+
+}
+
+header .navBar .navbar-collapse .mr-auto .nav-links {
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+header .navBar .navbar-collapse .mr-auto .main-nav-active {
+    color: rgb(116, 196, 231);
+    background-color: #90e0ef;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    font-weight: bold;
+}
+
+.logo {
+    margin-left: 1em;
+}
+
+.mr-auto {
+    margin-right: 2em;
+}

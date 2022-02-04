@@ -1,7 +1,8 @@
 class API {
     constructor() {
         //this.apiEndPoint = "http://156.35.163.139:5000";
-        this.apiEndPoint = "http://192.168.99.103:5000";
+        //this.apiEndPoint = "http://192.168.99.103:5000";
+        this.apiEndPoint = "http://localhost:5000";
     }
 
     buildHeaders() {
@@ -10,10 +11,11 @@ class API {
         return headers;
     }
 
-    async getPrediction(body = {}) {
+    async getPrediction(image, index) {
         const formData = new FormData();
 
-        formData.append("image", body);
+        formData.append("image", image);
+        formData.append("index", index.toString());
 
         const response = await fetch(`${this.apiEndPoint}/predict`,
             { method: "POST", body: formData });

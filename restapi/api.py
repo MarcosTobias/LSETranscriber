@@ -14,8 +14,9 @@ api = Api(app, version='1.0', title='LSE Transcriber API', description='API for 
 @api.route('/predict', methods=["POST"])
 class PredictImage(Resource):
     def post(self):
-
         file = request.files['image']
+        
+        index = request.form['index']
 
         img = Image.open(file.stream)
 
@@ -26,16 +27,13 @@ class PredictImage(Resource):
 
         boundedHand = bb.getBoundingBox(img)
 
-        if boundedHand.size == "none":
-            return jsonify({'msg': 'error', 'prediction': 'No hand detected'})
+        if boundedHand == "none":
+            return jsonify({'msg': 'success', 'prediction': 'No hand detected'})
 
 
         prediction, confidence = mp.predict(boundedHand)
 
-        if prediction == -1:
-            return jsonify({'msg': 'error', 'prediction': 'Not surpassing confidence threshold', 'confidence': json.dumps(str(confidence))})
-        else:
-            return jsonify({'msg': 'success', 'prediction': prediction, 'confidence': json.dumps(str(confidence))})
+        return jsonify({'msg': 'success', 'prediction': prediction, 'index': index, 'confidence': json.dumps(str(confidence))})
 
 
 @api.route('/hello')

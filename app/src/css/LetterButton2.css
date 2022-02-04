@@ -1,0 +1,43 @@
+.btn2 {
+	 background-color: black;
+	 width: 50px;
+	 height: 80px;
+	 line-height: 35px;
+	 margin: auto;
+	 position: relative;
+	 color: #fff;
+	 cursor: pointer;
+	 overflow: visible;
+	 border-radius: 5px;
+	 font-size: larger;
+	 box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.text-black2 {
+	color: black;
+}
+
+.btn2.btn-letter2::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-color: #c0392b;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 300ms cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.btn2.btn-letter2:hover::before,
+.btn2.btn-letter2:focus::before {
+	transform: scaleY(30%);
+	content: "x";
+	font-size: 30px;
+}
+
+.btn2.btn-letter2 {
+	z-index: 1;
+}
