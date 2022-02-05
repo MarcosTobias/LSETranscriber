@@ -1,0 +1,23 @@
+.btn-gradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(92, 92, 92) 100%);
+    border-radius: 8px;
+    padding: .6em;
+    width: 6.5em;
+    margin: 1em;
+    box-shadow: 2px 3px;
+    font-weight: bolder;
+}
+
+.row {
+    margin: auto !important;
+}
+
+.btn-container {
+    width: 30%;
+    margin: auto;
+}
+
+.timer-col {
+    padding: 1.5em;
+}

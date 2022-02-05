@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Fab } from '@material-ui/core';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPrediction } from "../redux/slices/predictionSlice/predictionSlice";
 import "../css/PredictionView.css";
-import SendIcon from "@material-ui/icons/Send"
 import Webcam from "react-webcam"
 import Predictions from "./Predictions.js"
 import "../css/timer.css"
+import "../css/Video.css"
 
 export default function PredictionVirew(props) {
     const dispatch = useDispatch();
-    const [photo, setPhoto] = useState(null);
     const predictionError = useSelector((state) => state.predictions.error);
     const isRecording = useSelector(state => state.predictions.isRecording);
     const index = useSelector(state => state.predictions.index);
@@ -23,8 +21,7 @@ export default function PredictionVirew(props) {
 
     const capture = () => {
         const img = webcamRef.current.getScreenshot();
-        //setPhoto(img);
-        
+
         dispatch(fetchPrediction(img, index));
     }
 
@@ -47,30 +44,17 @@ export default function PredictionVirew(props) {
     return (
         <div className="trans">
             <div className="box">
-                <Webcam
-                    audio={false}
-                    height={400}
-                    ref={webcamRef}
-                    screenshotFormat="image/png"
-                    width={880}
-                    videoConstraints={videoConstraints}
-                />
-            </div>
-            {photo !== null &&
-                <img className="picture" alt="location uploaded" src={photo} />
-            }
-
-
-            {isRecording &&
-                <div id="timer" className="timer">
-                    <div id="mask" className="mask"></div>
+                <div className="gradient-border">
+                    <Webcam
+                        className="webcam"
+                        audio={false}
+                        height={400}
+                        ref={webcamRef}
+                        screenshotFormat="image/png"
+                        width={880}
+                        videoConstraints={videoConstraints}
+                    />
                 </div>
-            }
-
-            <div className="fabcontainer">
-                <Fab color="primary" aria-label="send" onClick={capture}>
-                    <SendIcon />
-                </Fab>
             </div>
             <Predictions />
         </div>

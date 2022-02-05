@@ -2,23 +2,21 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSpeechSynthesis } from "react-speech-kit";
-import { addSpace, removePrediction, switchRecording } from "../redux/slices/predictionSlice/predictionSlice";
+import { removePrediction, switchRecording } from "../redux/slices/predictionSlice/predictionSlice";
 import LetterButton2 from './LetterButton2';
+import "../css/Predictions.css";
 
 export default function Predictions() {
-    const prediction = useSelector(state => state.predictions.prediction)
+    const prediction = useSelector(state => state.predictions.prediction);
+    const isRecording = useSelector(state => state.predictions.isRecording);
     const { speak, voices } = useSpeechSynthesis();
     const dispatch = useDispatch();
 
     console.log(prediction);
 
-    const onClick = () => { 
+    const onClick = () => {
         const text = prediction.join('');
         speak({ text: text, voice: voices[7] });
-    }
-
-    const onClickSpace = () => {
-        dispatch(addSpace());
     }
 
     const onClickRemove = () => {
@@ -32,16 +30,19 @@ export default function Predictions() {
 
     let result;
 
-    if(prediction !==  []) {
+    if (prediction !== []) {
         result = (
-            <Row>
-                <Col>
-                    <button onClick={onClick}>Read</button>
-                    <button onClick={onClickSpace}>Space</button>
-                    <button onClick={onClickRemove}>Remove</button>
-                    <button onClick={onClickRecord}>Start/stop</button>
+            <Row className="mt-5">
+                <Col className="mb-5">
+                    <button className="btn-gradient" onClick={onClick}>Read</button>
+                    <button className="btn-gradient" onClick={onClickRemove}>Remove</button>
+                    <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
+                    {isRecording &&
+                        <div id="timer" className="timer">
+                            <div id="mask" className="mask"></div>
+                        </div>
+                    }
                 </Col>
-                <br></br>
                 <ul>
                     {prediction.map(((item, index) => (
                         <LetterButton2 content={item} index={index} key={index} />

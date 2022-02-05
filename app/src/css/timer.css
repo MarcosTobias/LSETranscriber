@@ -1,12 +1,9 @@
 .timer {
-    background: -webkit-linear-gradient(left, skyBlue 50%, #eee 50%);
+    background: -webkit-linear-gradient(left, rgb(31, 31, 31) 50%, #eee 50%);
     border-radius: 100%;
     height: 30px;
     width: 30px;
-    position: relative;
     animation: time 2s steps(1000, start) infinite;
-    margin: auto;
-    margin-top: 2em;
 }
 .mask {
     border-radius: 100% 0 0 100% / 50% 0 0 50%;
@@ -33,11 +30,11 @@
         -webkit-transform: rotate(-180deg);
     }
     50.01% {
-        background: skyBlue;
+        background: rgb(31, 31, 31);
         -webkit-transform: rotate(0deg);
     }
     100% {
-        background: skyBlue;
+        background: rgb(31, 31, 31);
         -webkit-transform: rotate(-180deg);
     }
 }

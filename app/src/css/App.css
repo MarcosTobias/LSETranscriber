@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  background: url('../img/bg2.jpg') no-repeat center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4em);
+  overflow: hidden;
+  margin-top: 4em;
+}
+
