@@ -20,10 +20,6 @@ export const predictionSlice = createSlice({
     name: "predictions",
     initialState,
     reducers: {
-        addSpace: (state) => {
-            state.prediction = state.prediction.concat(' ');
-            state.index = state.index + 1;
-        },
         removeLetter: (state, action) => {
             state.prediction.splice(action.payload, 1);
             state.index = state.index - 1;
@@ -83,4 +79,4 @@ export const predictionSlice = createSlice({
 
 export default predictionSlice.reducer;
 
-export const { addSpace, removeLetter, removePrediction, switchRecording } = predictionSlice.actions;
+export const { removeLetter, removePrediction, switchRecording } = predictionSlice.actions;

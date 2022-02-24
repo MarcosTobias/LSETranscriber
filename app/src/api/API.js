@@ -4,12 +4,12 @@ class API {
         //this.apiEndPoint = "http://192.168.99.103:5000";
         this.apiEndPoint = "http://localhost:5000";
     }
-
+/*
     buildHeaders() {
         const headers = new Headers();
         headers.append("Content-Type", "multipart/formdata");
         return headers;
-    }
+    }*/
 
     async getPrediction(image, index) {
         const formData = new FormData();

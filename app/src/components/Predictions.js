@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSpeechSynthesis } from "react-speech-kit";
 import { removePrediction, switchRecording } from "../redux/slices/predictionSlice/predictionSlice";
-import LetterButton2 from './LetterButton2';
+import LetterButton from './LetterButton';
 import "../css/Predictions.css";
 
 export default function Predictions() {
@@ -30,7 +30,7 @@ export default function Predictions() {
 
     let result;
 
-    if (prediction !== []) {
+    if (prediction.length !== 0) {
         result = (
             <Row className="mt-5">
                 <Col className="mb-5">
@@ -45,7 +45,7 @@ export default function Predictions() {
                 </Col>
                 <ul>
                     {prediction.map(((item, index) => (
-                        <LetterButton2 content={item} index={index} key={index} />
+                        <LetterButton content={item} index={index} key={index} />
                     )))}
                 </ul>
             </Row>

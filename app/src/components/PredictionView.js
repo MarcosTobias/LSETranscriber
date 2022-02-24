@@ -12,6 +12,8 @@ export default function PredictionVirew(props) {
     const predictionError = useSelector((state) => state.predictions.error);
     const isRecording = useSelector(state => state.predictions.isRecording);
     const index = useSelector(state => state.predictions.index);
+
+    console.log(isRecording);
     const videoConstraints = {
         width: 1280,
         height: 720,
