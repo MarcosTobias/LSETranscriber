@@ -31,3 +31,11 @@
 .MuiFormHelperText-root {
     color: white !important;
 }
+
+.timerDiv {
+   display: flex;
+   justify-content: center;
+   margin-top: 2em;
+   margin-bottom: 2em;
+   height: 2em;
+}

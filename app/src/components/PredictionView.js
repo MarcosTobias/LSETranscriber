@@ -57,6 +57,13 @@ export default function PredictionVirew(props) {
                         videoConstraints={videoConstraints}
                     />
                 </div>
+                <div className="timerDiv">
+                        {isRecording &&
+                            <div id="timer" className="timer">
+                                <div id="mask" className="mask"></div>
+                            </div>
+                        }
+                </div>
             </div>
             <Predictions />
         </div>

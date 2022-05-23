@@ -34,14 +34,9 @@ export default function Predictions() {
         result = (
             <Row className="mt-5">
                 <Col className="mb-5">
-                    <button className="btn-gradient" onClick={onClick}>Read</button>
-                    <button className="btn-gradient" onClick={onClickRemove}>Remove</button>
-                    <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
-                    {isRecording &&
-                        <div id="timer" className="timer">
-                            <div id="mask" className="mask"></div>
-                        </div>
-                    }
+                        <button className="btn-gradient" onClick={onClick}>Read</button>
+                        <button className="btn-gradient" onClick={onClickRemove}>Remove</button>
+                        <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
                 </Col>
                 <ul>
                     {prediction.map(((item, index) => (

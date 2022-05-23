@@ -1,26 +1,27 @@
 # LSETranscriber
-How to run:
+## Requirements
+For running LSETranscriber you will need the following technologies:
+* Docker
 
-Currently working on docker integration.
+&nbsp;
 
-Right now you would need to run the web application and the restapi.
+## How to run:
 
-For running the web application:
-
-```
-cd app
-npm install
-npm start
-```
-
-For the restapi its recommended to use a virtual environment:
+First, download the code and then, on a terminal located on the root directory, run:
 
 ```
-cd restapi
-pip install -r requirements.txt
-python api.py
+docker-compose up --build
 ```
 
-The app is visible on localhost:3000.
+Once the process ends, both the frontend and the rest API will be deployed.
+The frontend can be accesed at:
+```
+http://localhost:3000
+```
 
-If running on Linux, there is a problem in makePrediction.py line 8, where you would need to change the relative path to the pretrained model, as Linux uses "/" instead of "\\".
+And the rest API Swagger documentation at:
+```
+http://localhost:5000
+```
+
+For stopping the services you can run Ctrl + C on the console used for setting up the application.
