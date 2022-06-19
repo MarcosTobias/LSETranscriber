@@ -1,0 +1,21 @@
+name: CI for LSETranscriber
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-test-webapp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory:app
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      with:
+        node-version: 14.15.4
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      

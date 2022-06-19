@@ -8,11 +8,8 @@ import "../css/Predictions.css";
 
 export default function Predictions() {
     const prediction = useSelector(state => state.predictions.prediction);
-    const isRecording = useSelector(state => state.predictions.isRecording);
     const { speak, voices } = useSpeechSynthesis();
     const dispatch = useDispatch();
-
-    console.log(prediction);
 
     const onClick = () => {
         const text = prediction.join('');

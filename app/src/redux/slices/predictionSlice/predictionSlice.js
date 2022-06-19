@@ -3,7 +3,6 @@ import apiFetchPrediction from "../../../api/apiFetchPrediction";
 
 export const fetchPrediction = createAsyncThunk("/predict", async (photo, { getState }) => {
     return await apiFetchPrediction(photo, getState().predictions.index);
-
 });
 
 const initialState = {

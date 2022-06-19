@@ -14,7 +14,6 @@ class API {
 
 
         const res = await response.json();
-        console.log(res);
 
         return res;
     }

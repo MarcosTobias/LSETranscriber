@@ -11,6 +11,8 @@ test("Capture is dispatched", async () => {
 
     const button = getByRole("button", { name: "Start/stop" });
 
+    expect(button).toBeInTheDocument();
+
     fireEvent.click(button);
 
 

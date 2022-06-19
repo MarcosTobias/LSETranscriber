@@ -25,13 +25,19 @@ test("onClick read delete and record", async () => {
 
     const button = getByRole("button", { name: "Read" });
 
+    expect(button).toBeInTheDocument();
+
     fireEvent.click(button);
 
     const button2 = getByRole("button", { name: "Remove" });
 
+    expect(button2).toBeInTheDocument();
+
     fireEvent.click(button2);
 
     const button3 = getByRole("button", { name: "Start/stop" });
+
+    expect(button3).toBeInTheDocument();
 
     fireEvent.click(button3);
 

@@ -7,13 +7,12 @@ import Predictions from "./Predictions.js"
 import "../css/timer.css"
 import "../css/Video.css"
 
-export default function PredictionVirew(props) {
+export default function PredictionView(props) {
     const dispatch = useDispatch();
     const predictionError = useSelector((state) => state.predictions.error);
     const isRecording = useSelector(state => state.predictions.isRecording);
     const index = useSelector(state => state.predictions.index);
 
-    console.log(isRecording);
     const videoConstraints = {
         width: 1280,
         height: 720,
