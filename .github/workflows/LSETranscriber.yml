@@ -10,12 +10,11 @@ jobs:
     defaults:
       run:
         working-directory: app
-      steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: 14.15.4
-      - run: npm ci
-      - run: npm run build
-      - run: npm test
-      
+    - run: npm ci
+    - run: npm run build
+    - run: npm test
