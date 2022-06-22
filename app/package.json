@@ -65,7 +65,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(css|less|ts)$": "<rootDir>/src/config/CSSStub.js"
+      "^.+\\.(css|less)$": "<rootDir>/src/config/CSSStub.js"
     }
   }
 }
