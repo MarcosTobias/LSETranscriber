@@ -8,8 +8,7 @@ export default function LetterButton(props) {
     const dispatch = useDispatch();
 
     const click = () => {
-        dispatch(removeLetter(props.index));    
-        console.log(props.index);
+        dispatch(removeLetter(props.index));
     }
 
     if (props.content === " ") {

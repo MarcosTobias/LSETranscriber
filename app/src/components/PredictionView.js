@@ -78,7 +78,7 @@ export default function PredictionView(props) {
                                 }
                                 </div>
                             </div>
-                            <div className="col-sm helpButton">
+                            <div className="col-sm helpButton" role="figure">
                                 <HelpIcon onMouseEnter={doShowSigns}/>
                             </div>
                         </div>

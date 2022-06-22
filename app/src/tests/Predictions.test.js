@@ -61,6 +61,6 @@ test("empty prediction", async () => {
 
     const button = queryByText("Read");
 
-    expect(button).not.toBeInTheDocument();
+    expect(button).toBeInTheDocument();
 
 });

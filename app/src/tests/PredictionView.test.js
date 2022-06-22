@@ -22,4 +22,10 @@ test("Capture is dispatched", async () => {
         res()
       }, 2500))
 
+    const helpIcon = getByRole("figure").children[0];
+
+    fireEvent.mouseEnter(helpIcon);
+
+    expect(helpIcon).toBeInTheDocument();
+
 });

@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import "../css/AboutView.css";
-import Chevron from "react-chevron";
 import Hands from "../img/bg-manos.png";
 import Developer from "./aboutComponents/Developer";
 import Project from "./aboutComponents/Project";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function AboutView(props) {
     const firstDivRef = useRef();
@@ -22,7 +22,7 @@ export default function AboutView(props) {
                 <div className="scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" onClick={scrollDown}>
                     Scroll down
                     <br/>
-                    <Chevron direction={'down'} className="bottom"/>
+                    <KeyboardArrowDownIcon direction={'down'} className="bottom"/>
                 </div>
             </div>
 
