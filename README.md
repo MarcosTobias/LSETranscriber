@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/MarcosTobias/LSETranscriber/branch/master/graph/badge.svg?token=Y8GYT8LLUL)](https://codecov.io/gh/MarcosTobias/LSETranscriber)
+
 # LSETranscriber
 ## Requirements
 For running LSETranscriber you will need the following technologies:
