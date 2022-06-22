@@ -3,12 +3,11 @@
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
     display: flex;
     font-size: 1.2rem;
-    color: rgb(116, 196, 231);
-    height: 4em;
 }
 
 .nav-links:hover {
-    background-color: #90e0ef;
+    background-color: white;
+    color: black !important;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 
@@ -17,11 +16,10 @@
 header .navBar .navbar-collapse .mr-auto .nav-links {
     color: white;
     padding: 0.5rem 1rem;
+    margin-right: 1em;
 }
 
 header .navBar .navbar-collapse .mr-auto .main-nav-active {
-    color: rgb(116, 196, 231);
-    background-color: #90e0ef;
     border-radius: 4px;
     transition: all 0.2s ease-out;
     font-weight: bold;

@@ -35,7 +35,30 @@
 .timerDiv {
    display: flex;
    justify-content: center;
-   margin-top: 2em;
-   margin-bottom: 2em;
    height: 2em;
+}
+
+.signs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 999;
+    border: 5px solid rgba(152, 152, 152, 0.8);;
+    border-radius: 5px;
+}
+
+.signsHelp {
+    width: 90%;
+    margin-top: 1em;
+}
+
+.info {
+    font-size: large;
+    font-style: oblique;
+    text-justify: inter-character;
+    padding: 2em;
 }

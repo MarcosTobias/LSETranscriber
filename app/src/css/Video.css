@@ -9,12 +9,12 @@
 
 .gradient-border {
     border-radius: 5px;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgb(177, 176, 176) 0%, rgba(0,0,0,1) 100%);
+    background: rgba(152, 152, 152, 0.8);
+    /* background: linear-gradient(180deg, rgb(177, 176, 176) 0%, rgba(0,0,0,1) 100%); */
 }
 
 .box {
     width: 35%;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 3.7em;
 }

@@ -13,7 +13,6 @@ export default function NavBar() {
             <Navbar.Brand as={Link} to="/" className="mb-1">
                 <img src={Logo} alt="LSE Transcriber logo" className="logo"/>
             </Navbar.Brand>
-
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav className="mr-auto">

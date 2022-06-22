@@ -27,25 +27,20 @@ export default function Predictions() {
 
     let result;
 
-    if (prediction.length !== 0) {
-        result = (
-            <Row className="mt-5">
-                <Col className="mb-5">
-                        <button className="btn-gradient" onClick={onClick}>Read</button>
-                        <button className="btn-gradient" onClick={onClickRemove}>Remove</button>
-                        <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
-                </Col>
-                <ul>
-                    {prediction.map(((item, index) => (
-                        <LetterButton content={item} index={index} key={index} />
-                    )))}
-                </ul>
-            </Row>
-        );
-    } else {
-        result = <></>;
-    }
-
+    result = (
+        <Row>
+            <Col className="mb-5">
+                    <button className="btn-gradient" onClick={onClick} disabled={prediction.length === 0}>Read</button>
+                    <button className="btn-gradient" onClick={onClickRemove} disabled={prediction.length === 0}>Remove</button>
+                    <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
+            </Col>
+            <ul>
+                {prediction.map(((item, index) => (
+                    <LetterButton content={item} index={index} key={index} />
+                )))}
+            </ul>
+        </Row>
+    );
 
     return result;
 }

@@ -1,0 +1,114 @@
+.scroll {
+    position: absolute;
+    bottom: 100px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.fullDiv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 10px;
+    display: block;
+    animation: pulse 2s infinite;
+    font-size: 29px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.header1 {
+    color: black;
+    font-weight: bold;
+}
+
+.hands {
+    width: 50%;
+    margin-top: 3em;
+}
+
+.banner {
+    margin: 2em;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.flex {
+    width: 100%;
+    margin: auto;
+    margin-top: 4em;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 10px;
+}
+
+.marcos {
+    width: 45%;
+    border-radius: 50%;
+}
+
+.margin-bottom {
+    margin-top: 4em;
+    color: white;
+}
+
+.center2 {
+    display: flex;
+    align-items: center;
+}
+
+.row {    
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.center3 {
+    display: flex;
+    align-items: center;
+    padding-top: 4em;
+}
+
+.centering {
+    margin: auto;
+}
+
+#name {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#desc {
+    font-size: large;
+    font-style: oblique;
+    text-justify: inter-character;
+}
+
+.marginTop {
+    margin-top: 7em;
+}
+
+.margin {
+    margin-bottom: 6em;
+}
