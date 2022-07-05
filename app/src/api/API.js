@@ -1,6 +1,6 @@
 class API {
     constructor() {
-        this.apiEndPoint = "http://localhost:5000";
+        this.apiEndPoint = "http://192.168.1.110:5000";
     }
 
     async getPrediction(image, index) {

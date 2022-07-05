@@ -8,8 +8,8 @@ export const fetchPrediction = createAsyncThunk("/predict", async (photo, { getS
 const initialState = {
     status: "idle",
     error: null,
-    prediction: ['H', 'o', 'l', 'a', ' ', 'b', 'u', 'e', 'n', 'a', 's'],
-    //prediction: [],
+    //prediction: ['H', 'o', 'l', 'a', ' ', 'b', 'u', 'e', 'n', 'a', 's'],
+    prediction: [],
     noHandCounter: 0,
     isRecording: false,
     index: 0

@@ -1,5 +1,5 @@
 import json
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 from flask_restx import Resource, Api
 from PIL import Image
@@ -23,11 +23,15 @@ class PredictImage(Resource):
     @api.response(500, 'Internal Server Error')
     @api.expect(parser)
     def post(self):
+
         file = request.files['image']
         
         index = request.form['index']
 
-        img = Image.open(file.stream)
+        try:
+            img = Image.open(file.stream)
+        except:
+            abort(400, 'There was a problem with the image provided')
 
         img = np.array(img)
 

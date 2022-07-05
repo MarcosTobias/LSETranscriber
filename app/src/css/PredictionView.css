@@ -45,9 +45,10 @@
     transform: translate(-50%, -50%);
     width: 60%;
     margin: 0 auto;
+    margin-top: 4em;
     background-color: white;
     z-index: 999;
-    border: 5px solid rgba(152, 152, 152, 0.8);;
+    border: 5px solid rgba(152, 152, 152, 0.8);
     border-radius: 5px;
 }
 
