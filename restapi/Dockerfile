@@ -13,7 +13,5 @@ RUN apt-get install ffmpeg libsm6 libxext6 -y
 
 COPY . .
 
-RUN ls -la /restapi/model/trained_tuned_ext2
-
 CMD ["python", "api.py"]
 
