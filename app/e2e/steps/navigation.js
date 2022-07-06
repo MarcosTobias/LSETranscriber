@@ -15,12 +15,22 @@ defineFeature(feature, (test) => {
         });
 
         when("The user clicks on About", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+
             const button = await page.$("a#about");
             
             await button.evaluate(b => b.click());
         });
 
         then("The user is shown the about page", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+
             await expect(page).toMatch("About page");
         });
     });
@@ -31,12 +41,22 @@ defineFeature(feature, (test) => {
         });
 
         when("The user clicks on Help", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+
             const button = await page.$("a#help");
             
             await button.evaluate(b => b.click());
         });
 
         then("The user is shown the help page", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+
             await expect(page).toMatch("First of all");
         });
     });
@@ -47,12 +67,22 @@ defineFeature(feature, (test) => {
         });
 
         when("The user clicks on LSETranscriber", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+
             const button = await page.$("a.mb-1");
             
             await button.evaluate(b => b.click());
         });
 
         then("The user is shown the main page", async () => {
+            await new Promise(res => setTimeout(() => {
+                expect(true).toBe(true)
+                res()
+              }, 2500))
+              
             await expect(page).toMatch("Start/stop");
         });
     });

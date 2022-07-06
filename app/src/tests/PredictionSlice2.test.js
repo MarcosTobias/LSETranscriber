@@ -16,7 +16,7 @@ test("sign detected", async () => {
         <PredictionView/>
     </Provider>)
 
-    const button3 = getByRole("button", { name: "Start/stop" });
+    const button3 = getByRole("button", { name: "predictions.start" });
 
     expect(button3).toBeInTheDocument();
 
