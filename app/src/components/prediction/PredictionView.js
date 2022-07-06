@@ -8,8 +8,11 @@ import "../../css/timer.css";
 import "../../css/Video.css";
 import HelpIcon from '@mui/icons-material/Help';
 import Signs from "../../img/bg-manos-small.png";
+import { useTranslation } from 'react-i18next';
 
 export default function PredictionView(props) {
+    const { t } = useTranslation();
+
     const dispatch = useDispatch();
     const predictionError = useSelector((state) => state.predictions.error);
     const isRecording = useSelector(state => state.predictions.isRecording);
@@ -89,10 +92,9 @@ export default function PredictionView(props) {
             </div>
             {showSigns &&
                 <div className="signs" onMouseLeave={doShowSigns}>
-                    <img className="signsHelp" src={Signs} alt="Fingerspelling for the LSE"/>
+                    <img className="signsHelp" src={Signs} alt={t('signsHelp.alt')}/>
                     <p className="info">
-                        This is just a memo of the signs recognisable by LSETranscriber. For more information regarding 
-                        how the app works visit the Help page on the top right corner.
+                        {t('signsHelp.text')}
                     </p>
                 </div>
             }

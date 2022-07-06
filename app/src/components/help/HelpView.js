@@ -1,38 +1,48 @@
 import React from 'react';
 import "../../css/HelpView.css";
 import MainButtons from "../../img/main_buttons.png";
+import { useTranslation, Trans } from 'react-i18next';
 
+export default function HelpView() {
+    const { t } = useTranslation();
 
-export default function HelpView(props) {
     return(
         <div className="helper">
-            <h1 className="mt-5 header1">Help</h1>
+            <h1 className="mt-5 header1">{t('help.help')}</h1>
             <div className="helpContent">
-                <h2>Start using LSE Transcriber</h2>
+                <h2>{t('help.subtitle')}</h2>
                 <p>
-                    First of all, you need to give us permissions to use your webcam. This will be the feed that will be used for predicting your signs. Once
-                    you can see yourself on the center of the main page, you will need to start recording your signs.
+                    {t('help.text1')}
                 </p>
                 <p>
-                    For that, there are some important buttons on the center of the page. I will describe their functionality based on their number.
-                    <img src={MainButtons} alt="Buttons of the main page" className="mainButtons"/>
+                    {t('help.text2')}
+                    <img src={MainButtons} alt={t('help.alt')} className="mainButtons"/>
 
                 </p>
                 <p className="mt-5">
-                    <b>1.Start/Stop:</b> Pressing this button will alternate the recording. While you are recording, every two seconds a screenshot is taken from your webcam, so have the sign ready
-                    by then!
+                    <Trans i18nKey="help.text3">
+                        <strong>1. Grabar/Parar:</strong> Pulsando este botón se alternará la grabación. Mientras estás grabando se realizará una captura de tu webcam cada dos segundos, ¡así que estate preparado!
+                    </Trans>
                 </p>
                 <p>
-                    <b>2. Remove:</b> This button will remove the hole prediction, in the case you want to start a new one
+                    <Trans i18nKey="help.text4">
+                        <strong>2. Borrar:</strong> Este botón borrará la predicción al completo, en el caso de que quieras comenzar una nueva
+                    </Trans>
                 </p>
                 <p>
-                    <b>3. Read:</b> Pressing this button will read out loud the actual prediction, in spanish.
+                    <Trans i18nKey="help.text5">
+                        <strong>3. Leer:</strong> Al pulsar este botón se leerá la predicción actual, en español.
+                    </Trans>
                 </p>
                 <p>
-                    <b>4. Timer:</b> This element is a timer that would help you know how much time you have until the next screenshot. The timer only appears on screen when you are recording.
+                    <Trans i18nKey="help.text6">
+                        <strong>4. Temporizador:</strong> Este elemento es un temporizador que te ayudará a saber cuanto tiempo tienes antes de la siguiente captura. El temporizador solo aparecerá en la pantalla mientras estás grabando.
+                    </Trans>
                 </p>
                 <p>
-                    <b>5. Question mark:</b> If you hover this question mark, you will be prompted with every sign recognisable by LSE Transcriber. Just in case you forget them!
+                    <Trans i18nKey="help.text7">
+                        <strong>5. Signo de interrogación:</strong> Si pasas el ratón por encima suya, aparecerá una pantalla en la que podrás ver todos los signos reconocibles por LSETranscriber. ¡Por si acaso se te olvidó alguno!
+                    </Trans>
                 </p>
             </div>
             <div className="margin-bottom">a</div>

@@ -8,12 +8,19 @@ import "aos/dist/aos.css";
 import "semantic-ui-css/semantic.min.css";
 import AboutView from './components/about/AboutView';
 import Aos from "aos";
-import { React, useEffect } from 'react';
+import { React, Suspense, useEffect } from 'react';
 import HelpView from './components/help/HelpView';
+import Logo from "./img/logo-lse.png";
 
 
+const Loader = () => (
+  <div className="loader">
+    <img src={Logo} className="logo" alt="logo" />
+    <div>loading---</div>
+  </div>
+);
 
-function App() {
+export default function App() {
   const history = createMemoryHistory();
 
   useEffect(() => {
@@ -39,10 +46,10 @@ function App() {
   );
 
   return (
-    <BrowserRouter location={history.location} navigator={history}>
-      {content}
-    </BrowserRouter>
+    <Suspense fallback={<Loader />}>
+      <BrowserRouter location={history.location} navigator={history}>
+        {content}
+      </BrowserRouter>
+    </Suspense>
   );
 }
-
-export default App;

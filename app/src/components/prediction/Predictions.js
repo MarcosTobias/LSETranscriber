@@ -5,8 +5,11 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import { removePrediction, switchRecording } from "../../redux/slices/predictionSlice/predictionSlice";
 import LetterButton from './LetterButton';
 import "../../css/Predictions.css";
+import { useTranslation } from 'react-i18next';
 
 export default function Predictions() {
+    const { t } = useTranslation();
+
     const prediction = useSelector(state => state.predictions.prediction);
     const { speak, voices } = useSpeechSynthesis();
     const dispatch = useDispatch();
@@ -30,9 +33,9 @@ export default function Predictions() {
     result = (
         <Row>
             <Col className="mb-5">
-                    <button className="btn-gradient" onClick={onClick} disabled={prediction.length === 0}>Read</button>
-                    <button className="btn-gradient" onClick={onClickRemove} disabled={prediction.length === 0}>Remove</button>
-                    <button className="btn-gradient" onClick={onClickRecord}>Start/stop</button>
+                    <button className="btn-gradient" onClick={onClick} disabled={prediction.length === 0}>{t('predictions.read')}</button>
+                    <button className="btn-gradient" onClick={onClickRemove} disabled={prediction.length === 0}>{t('predictions.remove')}</button>
+                    <button className="btn-gradient" onClick={onClickRecord}>{t('predictions.start')}</button>
             </Col>
             <ul>
                 {prediction.map(((item, index) => (

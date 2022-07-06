@@ -1,0 +1,47 @@
+{
+    "lsetranscriber": "LSE Transcriber",
+    "nav": {
+        "about": "Acerca de",
+        "help": "Ayuda",
+        "language": "Idioma",
+        "english": "Inglés",
+        "spanish": "Español"
+    },
+    "signsHelp": {
+        "alt": "Alfabeto dactilológico del LSE",
+        "text": "Estos son los signos reconocidos por LSETranscriber. Para más información sobre el funcionamiento de la aplicación puede visitar la página de ayuda a través del botón en la esquina superior derecha."
+        
+    },
+    "predictions": {
+        "read": "Leer",
+        "remove": "Borrar",
+        "start": "Grabar/Parar"
+    },
+    "help": {
+        "help": "Ayuda",
+        "subtitle": "Empieza a usar LSE Transcriber",
+        "text1": "Para usar la aplicación, necesistamos que nos des permiso para acceder a tu webcam. Se usará para tomar capturas y realizar las prediciones sobre tus signos. Una vez que te veas a ti mismo en el centro, puedes comenzar la grabación de los signos.",
+        "text2": "Para ello, hay unos botones en el centro de la pantalla. A continuación describiré la funcionalidad de cada uno, por orden.",
+        "text3": "<0>1. Grabar/Parar:</0> Pulsando este botón se alternará la grabación. Mientras estás grabando se realizará una captura de tu webcam cada dos segundos, ¡así que estate preparado!",
+        "text4": "<0>2. Borrar:</0> Este botón borrará la predicción al completo, en el caso de que quieras comenzar una nueva",
+        "text5": "<0>3. Leer:</0> Al pulsar este botón se leerá la predicción actual, en español.",
+        "text6": "<0>4. Temporizador:</0> Este elemento es un temporizador que te ayudará a saber cuanto tiempo tienes antes de la siguiente captura. El temporizador solo aparecerá en la pantalla mientras estás grabando.",
+        "text7": "<0>5. Signo de interrogación:</0> Si pasas el ratón por encima suya, aparecerá una pantalla en la que podrás ver todos los signos reconocibles por LSETranscriber. ¡Por si acaso se te olvidó alguno!",
+        "alt": "Botones de la página principal"
+    },
+    "about": {
+        "about": "Acerca de",
+        "altSigns": "Alfabeto dactilológico",
+        "scrollDown": "Desplázame"
+    },
+    "project": {
+        "title": "Traducción de signo a voz",
+        "text1": "LSETranscriber tiene dos partes. Una aplicación web, que estás usando ahora mismo, y un servicio web. El servicio web es el que se encarga de recibir las capturas de la webcam y devolver una predicción. Esta separación surge con la intención de permitir que se usen por separado. Ambos son de código libre, por lo que si estás interesado en ampliarlo, ¡no dudes en ir al repositorio de <1 href='https://github.com/MarcosTobias/LSETranscriber'>Github</1>! Y si no quieres expandir la aplicación web no te preocupes, el modelo entrenado para la predicción de signos también esta subido en ese repositorio.",
+        "text2": "Una rápida mención a las tecnologías usadas durante el desarrollo. El modelo fue creado y entrenado con Tensorflow y Keras. La API REST fue hecha usando Flask, y esta aplicación web está construida con React."
+    },
+    "developer": {
+        "alt": "Imagen desarrollador",
+        "text1":"Soy un estudiante de Ingeniería del Software en la Universidad de Oviedo en España. Siempre he estado interesado en Machine Learning, lo que en el verano de 2021 me llevó a embarcarme en esta aventura que es el reconocimiento de imágenes.",
+        "text2": "Al principio de mi último año de universidad, decidí construir un proyecto de traducción de signos a voz para el Lenguaje de Signos Español como mi proyecto de fin de grado. Pensé que podría ser un desarrollo muy interesante y útil para profundizar mis conocimientos en aprendizaje automático, mientras ayudo a personas que podrían beneficiarse de este proyecto."
+    }
+}

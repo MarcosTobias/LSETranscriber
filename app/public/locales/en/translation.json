@@ -1,0 +1,46 @@
+{
+    "lsetranscriber": "LSE Transcriber",
+    "nav": {
+        "about": "About",
+        "help": "Help",
+        "language": "Language",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "signsHelp": {
+        "alt": "Fingerspelling for the LSE",
+        "text": "This is just a memo of the signs recognisable by LSETranscriber. For more information regarding how the app works visit the Help page on the top right corner."
+    },
+    "predictions": {
+        "read": "Read",
+        "remove": "Remove",
+        "start": "Start/stop"
+    },
+    "help": {
+        "help": "Help",
+        "subtitle": "Start using LSE Transcriber",
+        "text1": "First of all, you need to give us permissions to use your webcam. This will be the feed that will be used for predicting your signs. Once you can see yourself on the center of the main page, you will need to start recording your signs.",
+        "text2": "For that, there are some important buttons on the center of the page. I will describe their functionality based on their number.",
+        "text3": "<0>1. Start/Stop:</0> Pressing this button will alternate the recording. While you are recording, every two seconds a screenshot is taken from your webcam, so have the sign ready by then!",
+        "text4": "<0>2. Remove:</0> This button will remove the hole prediction, in the case you want to start a new one",
+        "text5": "<0>3. Read:</0> Pressing this button will read out loud the actual prediction, in spanish.",
+        "text6": "<0>4. Timer:</0> This element is a timer that would help you know how much time you have until the next screenshot. The timer only appears on screen when you are recording.",
+        "text7": "<0>5. Question mark:</0> If you hover this question mark, you will be prompted with every sign recognisable by LSE Transcriber. Just in case you forget them!",
+        "alt": "Buttons of the main page"
+    },
+    "about": {
+        "about": "About page",
+        "altSigns": "Fingerspelling signs",
+        "scrollDown": "Scroll down"
+    },
+    "project": {
+        "title": "Sign to speech transcriber",
+        "text1": "LSETranscriber has two sections. A web application, which you are using right now, and a web service. The service is the one that  makes the predictions of the signs performed. The idea behind separating the web from the service is for being able to use them separately. Both are open source, so if you are interested, jump to the <1 href='https://github.com/MarcosTobias/LSETranscriber'>GitHub</1> repo! And if you don't want to extend the application, don't worry. The trained model for sign recognition is uploaded as well.",
+        "text2": "Quick mention to the technologies used. The model was created and trained with Tensorflow and Keras. The REST API was made using Flask, and this web application is built with React."
+    },
+    "developer": {
+        "alt": "Imagen desarrollador",
+        "text1":"I'm an undergrad Software Engineer at the University of Oviedo in Spain. I've always been interested in Machine Learning, that is why during Summer 2021 I decided to embark on this adventure of image recognition.",
+        "text2": "At the beginning of my last year at University, I decided to build as my final degree project a sign to speech transcriber for the Spanish Sign Language, since I thought it could be very interesting for deepening my ML knowledge, and something that could help real people."
+    }
+}

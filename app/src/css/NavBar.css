@@ -5,12 +5,24 @@
     font-size: 1.2rem;
 }
 
-.nav-links:hover {
+.nav-links:hover, .dropdown-toggle:hover {
     background-color: white;
     color: black !important;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 
+}
+
+.dd:hover {
+    background-color: transparent !important;
+}
+
+.dd {
+    padding-top: 0 !important;
+}
+
+.dropdown-toggle {
+    color: white !important;
 }
 
 header .navBar .navbar-collapse .mr-auto .nav-links {
