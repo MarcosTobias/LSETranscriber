@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render } from '@testing-library/react';
-import AboutView from "../components/AboutView";
+import AboutView from "../components/about/AboutView";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 

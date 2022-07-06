@@ -1,6 +1,6 @@
 import React from 'react';
-import "../css/HelpView.css";
-import MainButtons from "../img/main_buttons.png";
+import "../../css/HelpView.css";
+import MainButtons from "../../img/main_buttons.png";
 
 
 export default function HelpView(props) {

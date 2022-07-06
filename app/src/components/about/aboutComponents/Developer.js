@@ -1,6 +1,6 @@
 import React from 'react';
 import { Divider } from "semantic-ui-react";
-import Marcos from "../../img/photo2.png";
+import Marcos from "../../../img/photo2.png";
 
 export default function Developer(props) {
     return (

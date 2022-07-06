@@ -1,15 +1,15 @@
 import './css/App.css';
-import PredictionView from "./components/PredictionView";
+import PredictionView from "./components/prediction/PredictionView";
 import NavBar from './components/NavBar';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
 import "semantic-ui-css/semantic.min.css";
-import AboutView from './components/AboutView';
+import AboutView from './components/about/AboutView';
 import Aos from "aos";
 import { React, useEffect } from 'react';
-import HelpView from './components/HelpView';
+import HelpView from './components/help/HelpView';
 
 
 

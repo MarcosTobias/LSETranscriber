@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPrediction } from "../redux/slices/predictionSlice/predictionSlice";
-import "../css/PredictionView.css";
+import { fetchPrediction } from "../../redux/slices/predictionSlice/predictionSlice";
+import "../../css/PredictionView.css";
 import Webcam from "react-webcam";
 import Predictions from "./Predictions.js";
-import "../css/timer.css";
-import "../css/Video.css";
+import "../../css/timer.css";
+import "../../css/Video.css";
 import HelpIcon from '@mui/icons-material/Help';
-import Signs from "../img/bg-manos-small.png";
+import Signs from "../../img/bg-manos-small.png";
 
 export default function PredictionView(props) {
     const dispatch = useDispatch();

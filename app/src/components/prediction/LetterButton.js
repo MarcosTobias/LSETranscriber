@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import "../css/LetterButton.css"
-import { removeLetter } from "../redux/slices/predictionSlice/predictionSlice"
+import "../../css/LetterButton.css"
+import { removeLetter } from "../../redux/slices/predictionSlice/predictionSlice"
 
 
 export default function LetterButton(props) {

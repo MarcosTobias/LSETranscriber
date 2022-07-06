@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render } from '@testing-library/react';
-import PredictionView from "../components/PredictionView";
+import PredictionView from "../components/prediction/PredictionView";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 import * as apiFetchPrediction from "../api/apiFetchPrediction";

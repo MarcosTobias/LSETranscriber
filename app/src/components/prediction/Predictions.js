@@ -2,9 +2,9 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSpeechSynthesis } from "react-speech-kit";
-import { removePrediction, switchRecording } from "../redux/slices/predictionSlice/predictionSlice";
+import { removePrediction, switchRecording } from "../../redux/slices/predictionSlice/predictionSlice";
 import LetterButton from './LetterButton';
-import "../css/Predictions.css";
+import "../../css/Predictions.css";
 
 export default function Predictions() {
     const prediction = useSelector(state => state.predictions.prediction);

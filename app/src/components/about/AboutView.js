@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import "../css/AboutView.css";
-import Hands from "../img/bg-manos.png";
+import "../../css/AboutView.css";
+import Hands from "../../img/bg-manos.png";
 import Developer from "./aboutComponents/Developer";
 import Project from "./aboutComponents/Project";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';

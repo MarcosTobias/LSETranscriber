@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render } from '@testing-library/react';
-import Predictions from "../components/Predictions";
+import Predictions from "../components/prediction/Predictions";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 

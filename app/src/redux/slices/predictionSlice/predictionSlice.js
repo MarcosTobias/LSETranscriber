@@ -8,7 +8,6 @@ export const fetchPrediction = createAsyncThunk("/predict", async (photo, { getS
 const initialState = {
     status: "idle",
     error: null,
-    //prediction: ['H', 'o', 'l', 'a', ' ', 'b', 'u', 'e', 'n', 'a', 's'],
     prediction: [],
     noHandCounter: 0,
     isRecording: false,
@@ -58,13 +57,12 @@ export const predictionSlice = createSlice({
                     state.index = state.index + 1;
                 }
 
-            //If detected a sign we add it to the prediction
+            //If it detected a sign we add it to the prediction
             } else {
                 let index = parseInt(action.payload.index);
 
                 state.prediction.splice(index, 0, action.payload.prediction);
 
-                //state.prediction = state.prediction.concat(action.payload.prediction);
                 state.index = state.index + 1;
                 state.noHandCounter = 0;
             }

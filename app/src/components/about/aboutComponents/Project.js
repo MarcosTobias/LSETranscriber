@@ -1,6 +1,6 @@
 import React from 'react';
 import { Divider } from "semantic-ui-react";
-import Logo from "../../img/logo-lse.png";
+import Logo from "../../../img/logo-lse.png";
 
 export default function Project(props) {
     return (
